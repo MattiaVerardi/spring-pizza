@@ -16,6 +16,9 @@
   			method="POST"
   		>
   		<form>
+  		<!-- campo nascosto per l'id -->
+  		<input type="hidden" th:field="*{id}">
+  		
   <div class="mb-3">
     <label for="inputNome" class="form-label">Nome</label>
     <input type="text" class="form-control" th:field="*{nome}" id="inputNome">
