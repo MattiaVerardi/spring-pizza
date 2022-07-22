@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class Pizza {
@@ -13,8 +14,11 @@ public class Pizza {
 	private Integer id;
 
 	private String nome;
+
+	@Lob
 	private String descrizione;
-	private Integer prezzo;
+
+	private double prezzo;
 
 	// getter e setter
 	public Integer getId() {
@@ -41,11 +45,11 @@ public class Pizza {
 		this.descrizione = descrizione;
 	}
 
-	public Integer getPrezzo() {
+	public double getPrezzo() {
 		return prezzo;
 	}
 
-	public void setPrezzo(Integer prezzo) {
+	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
 	}
 
