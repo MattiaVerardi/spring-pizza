@@ -44,6 +44,10 @@ public class PizzaController {
 		if (br.hasErrors()) {
 			return "/pizza/edit";
 		} else {
+			/*
+			 * if (formPizza.getId() != null) { System.out.println("SONO IN EDIT"); } else {
+			 * System.out.println("SONO IN CREATE"); }
+			 */
 			repo.save(formPizza);
 			return "redirect:/";
 		}
